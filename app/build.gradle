@@ -50,6 +50,8 @@ dependencies {
     implementation('org.apache.httpcomponents:httpmime:4.3') {
         exclude module: "httpclient"
     }
+    // getting dialing code library
+    implementation 'io.michaelrocks:libphonenumber-android:8.11.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'org.apache.commons:commons-io:1.3.2'
     implementation 'com.github.maayyaannkk:ImagePicker:1.0.0'

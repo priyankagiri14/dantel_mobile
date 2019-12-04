@@ -25,6 +25,7 @@ import com.app.dantel.mobile.Driver.Contract.ContractResponse;
 import com.app.dantel.mobile.Driver.DriverAttendance.model.driverattendancephoto.IndividualAttendancePojo;
 import com.app.dantel.mobile.Driver.DriverAttendance.model.team_attendance.TeamAttendanceResponse_MyPojo;
 import com.app.dantel.mobile.Driver.DriverAttendance.model.team_attendance.Team_Attendance_Response;
+import com.app.dantel.mobile.Driver.DriverSubAgentRegister.model.SubAgentResponseModel;
 import com.app.dantel.mobile.Driver.SignUpAgent.ResponseAuthority;
 import com.app.dantel.mobile.Driver.Driver_Dashboard.ValueWalletResponse;
 import com.app.dantel.mobile.Driver.SignUpAgent.SignUpResponse;
@@ -243,4 +244,15 @@ public interface Web_Interface {
     @Headers("Content-Type: application/json")
     @PUT("users/{id}")
     Call<ResponseBody> requestRicaDetailsUpdate(@Path("id") int id, @Body RequestBody requestAgentRicaUpdateDetails);
+
+    // getting sim serials by last 6 digits
+    @Headers({ "Content-Type: application/json"})
+    @GET("sims")
+    Call<ResponseBody> requestAgentSerialsSearch(@Query("query") String sim_serial);
+
+    // sub agent signup
+    @Headers({ "Content-Type: application/json"})
+    @POST("sims/agents")
+    Call<SubAgentResponseModel> requestSUbAgentSignUpResponse(@Body RequestBody requestSubAgentSignUp);
+
 }
