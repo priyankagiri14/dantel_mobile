@@ -156,7 +156,7 @@ public class SubAgentRegister extends AppCompatActivity implements View.OnClickL
         ArrayAdapter<CountryModel> country_spinner_adapter = new ArrayAdapter<>(SubAgentRegister.this,
                 R.layout.support_simple_spinner_dropdown_item, countries);
         sp_country.setAdapter(country_spinner_adapter);
-        sp_country.setSelection(246);
+        sp_country_nationality.setSelection(getIndex(sp_country_nationality,"South Africa"));
         sp_country.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {

@@ -411,7 +411,6 @@ public class Sim_allocation extends AppCompatActivity implements View.OnClickLis
                                 // numbers = bodyArray.get(i).toString();
                                 Log.d(TAG, "onResponse: numers:"+numbers);
                                 body_serials.add(bodyArray.get(i).toString());
-
                             }
 
                             Log.d(TAG, "onResponse: numbers:"+body_serials);
